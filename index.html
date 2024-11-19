@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .calculator-container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background: #f9f9f9;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .result {
+            height: 60px;
+            font-size: 2rem;
+            text-align: right;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #fff;
+        }
+        .btn {
+            font-size: 1.2rem;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator-container">
+        <h2 class="text-center">Calculadora do Jota</h2>
+        <input type="text" id="result" class="result form-control" readonly>
+        <div class="row g-2">
+            <div class="col-3"><button onclick="pressKey('7')" class="btn btn-light w-100">7</button></div>
+            <div class="col-3"><button onclick="pressKey('8')" class="btn btn-light w-100">8</button></div>
+            <div class="col-3"><button onclick="pressKey('9')" class="btn btn-light w-100">9</button></div>
+            <div class="col-3"><button onclick="pressKey('/')" class="btn btn-warning w-100">/</button></div>
+        </div>
+        <div class="row g-2">
+            <div class="col-3"><button onclick="pressKey('4')" class="btn btn-light w-100">4</button></div>
+            <div class="col-3"><button onclick="pressKey('5')" class="btn btn-light w-100">5</button></div>
+            <div class="col-3"><button onclick="pressKey('6')" class="btn btn-light w-100">6</button></div>
+            <div class="col-3"><button onclick="pressKey('*')" class="btn btn-warning w-100">x</button></div>
+        </div>
+        <div class="row g-2">
+            <div class="col-3"><button onclick="pressKey('1')" class="btn btn-light w-100">1</button></div>
+            <div class="col-3"><button onclick="pressKey('2')" class="btn btn-light w-100">2</button></div>
+            <div class="col-3"><button onclick="pressKey('3')" class="btn btn-light w-100">3</button></div>
+            <div class="col-3"><button onclick="pressKey('-')" class="btn btn-warning w-100">-</button></div>
+        </div>
+        <div class="row g-2">
+            <div class="col-3"><button onclick="pressKey('0')" class="btn btn-light w-100">0</button></div>
+            <div class="col-3"><button onclick="pressKey('.')" class="btn btn-light w-100">.</button></div>
+            <div class="col-3"><button onclick="calculateResult()" class="btn btn-success w-100">=</button></div>
+            <div class="col-3"><button onclick="pressKey('+')" class="btn btn-warning w-100">+</button></div>
+        </div>
+        <div class="row g-2 mt-3">
+            <div class="col-6">
+                <button onclick="clearResult()" class="btn btn-danger w-100">C</button>
+            </div>
+            <div class="col-6">
+                <button onclick="deleteLast()" class="btn btn-warning w-100">DEL</button>
+            </div>
+        </div>
+        
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
